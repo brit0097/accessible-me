@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/LocalBusiness">
 
 <head>
   <meta charset="UTF-8">
@@ -37,39 +37,40 @@
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       
-      <section class="owner" role="complementary" aria-labelledby="owner-heading">
+      <section class="owner" role="complementary" aria-labelledby="owner-heading" itemscope itemtype="https://schema.org/Person">
         <h3 id="owner-heading">Meet the owner</h3>
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+          <li>Name: <span itemprop="name">John Doe</span></li>
+          <li>Title: <span itemprop="jobTitle">CEO</span></li>
+          <li>Email: <span itemprop="email">johnjoe@jambox.ca</span></li>
+          <li>Phone: <span itemprop="telephone">613-000-0000</span></li>
         </ul>
 
         <h3>Address</h3>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
+        <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="name">Jambox Studios</span><br>
+          <span itemprop="streetAddress">123 Guitar Road</span>,<br>
+          <span itemprop="addressLocality">Musicville</span>, 
+          <span itemprop="addressRegion">Danceistan</span><br>
+          <span itemprop="postalCode">B3T 0L0</span>
         </p>
       </section>
 
       <section class="contact-section" role="form" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact Us</h2>
 
-        <form action="thanks.html">
+        <form action="thanks.html" itemscope itemtype="https://schema.org/ContactPoint">
           <label for="full-name">Full Name</label>
-          <input type="text" id="full-name" placeholder="Full Name">
+          <input type="text" id="full-name" placeholder="Full Name" itemprop="name">
 
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Email">
+          <input type="email" id="email" placeholder="Email" itemprop="email">
 
           <label for="subject">Subject</label>
-          <input type="text" id="subject" placeholder="Subject">
+          <input type="text" id="subject" placeholder="Subject" itemprop="contactType">
 
           <label for="message">Your Message</label>
-          <textarea id="message"></textarea>
+          <textarea id="message" itemprop="description"></textarea>
 
           <button type="submit">Send</button>
         </form>
